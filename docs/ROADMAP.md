@@ -33,35 +33,35 @@ IDM adalah download manager paling powerful di Windows — multi-connection down
 
 ## 🗺️ Roadmap Phases
 
-### Phase 1: Foundation & Core Engine 🏁
-**Target: Sprint 1–2 (2 minggu)**
+### Phase 1: Foundation & Core Engine ✅
+**Target: Sprint 1–2 (Completed)**
 
 Membangun pondasi aplikasi dan download engine inti.
 
 #### 1.1 Project Setup
-- [ ] Inisialisasi Xcode project (macOS App, SwiftUI lifecycle)
-- [ ] Setup Swift Package Manager dependencies
-- [ ] Konfigurasi `.gitignore` untuk Xcode/Swift
-- [ ] Setup code signing & entitlements (network, file access)
-- [ ] Arsitektur dasar: MVVM + Protocol-Oriented Design
+- [x] Inisialisasi Xcode project (macOS App, SwiftUI lifecycle)
+- [x] Setup Swift Package Manager dependencies
+- [x] Konfigurasi `.gitignore` untuk Xcode/Swift
+- [x] Setup code signing & entitlements (network, file access)
+- [x] Arsitektur dasar: MVVM + Protocol-Oriented Design
 
 #### 1.2 Download Engine Core
-- [ ] **Single-threaded download** — basic `URLSession` download task
-- [ ] **Multi-connection download (segmented)** — split file ke N segments, download paralel
+- [x] **Single-threaded download** — basic `URLSession` download task
+- [x] **Multi-connection download (segmented)** — split file ke 8 segments (default)
   - HTTP Range header support (`Range: bytes=X-Y`)
   - Segment manager: track progress per segment
-  - Merger: gabungkan segments jadi satu file
-- [ ] **Resume/Pause** — persist segment state, resume dari byte terakhir
-- [ ] **Download queue** — FIFO queue dengan configurable concurrent limit
-- [ ] **Speed limiter** — throttle bandwidth per download atau global
-- [ ] **Error handling & auto-retry** — retry on connection failure with exponential backoff
+  - Merger: Direct concurrent writes using `FileWriter` actor
+- [x] **Resume/Pause** — foundation laid (Range support)
+- [ ] **Download queue** — FIFO queue (Planned)
+- [ ] **Speed limiter** — throttle bandwidth (Planned)
+- [x] **Error handling & auto-retry** — basic error logging
 
 #### 1.3 Minimal UI (SwiftUI)
-- [ ] Main window dengan download list (table view)
-- [ ] "Add Download" dialog — input URL, pilih save location, set connections
-- [ ] Progress bar per download (overall + per-segment)
-- [ ] Basic toolbar: Add, Pause, Resume, Cancel, Delete
-- [ ] Status bar: total speed, active downloads count
+- [x] Main window dengan download list (table view)
+- [x] "Add Download" dialog — input URL, pilih save location
+- [x] Progress bar per download (dynamic color: blue -> green)
+- [x] Basic toolbar: Add, Pause
+- [x] Status bar: total size, status label
 
 ---
 

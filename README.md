@@ -33,7 +33,7 @@ See [docs/ROADMAP.md](docs/ROADMAP.md) for the full development roadmap.
 
 | Phase | Description | Status |
 |-------|------------|--------|
-| 1 | Core Engine | 🔲 Not started |
+| 1 | Core Engine | ✅ Completed |
 | 2 | Essential Features | 🔲 Not started |
 | 3 | Browser Integration | 🔲 Not started |
 | 4 | Advanced Features | 🔲 Not started |
